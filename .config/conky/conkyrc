@@ -1,0 +1,65 @@
+#display :0.0
+background no
+use_xft yes
+xftfont Bitstream Vera Sans Mono:size=10
+xftalpha 0.8
+update_interval 5.0
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_transparent true
+own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
+double_buffer yes
+minimum_size 280 5
+draw_shades yes
+draw_outline no
+draw_graph_borders yes
+stippled_borders 8
+border_width 1
+maximum_width 155
+default_color darkgrey
+default_shade_color black
+default_outline_color black
+alignment top_middle
+gap_x -232
+gap_y 10
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+override_utf8_locale no
+use_spacer none
+
+TEXT
+${color #FFF}${alignc}${kernel}
+${color #FFF}${alignc}${exec whoami}
+${color #1994D1}${alignc}on ${nodename}
+${color #1994D1}${alignc}${uptime_short}
+${color #1994D1}CPU: ${color grey}$cpu%
+${color #1994D1} ${cpugraph 16,140 000000 7f8ed3}
+${color #1994D1}RAM: $color$mem/$memmax
+${color #1994D1} ${membar 6,140}
+${color #1994D1}Swap:$color$swap/$swapmax
+${color #1994D1} ${swapbar 6,140}
+
+${color #1994D1}File systems:
+${color #1994D1}/     $color${fs_free /}
+${color #1994D1} ${fs_bar 6,140 /}
+${color #1994D1}Home $color${fs_free /home}
+${color #1994D1} ${fs_bar 6,140 /home}
+
+${color #1994D1}Processes:$color $processes | $running_processes
+${color} Cpu usage    CPU
+${color #ddaa00} ${top name 1}${offset -50} ${top cpu 1}
+${color #1994D1} ${top name 2}${offset -50} ${top cpu 2}
+${color #1994D1} ${top name 3}${offset -50} ${top cpu 3}
+${color #1994D1} ${top name 4}${offset -50} ${top cpu 4}
+
+${color} Mem usage    Mem
+${color #ddaa00} ${top_mem name 1}${offset -50} ${top_mem mem 1}
+${color #1994D1} ${top_mem name 2}${offset -50} ${top_mem mem 2}
+${color #1994D1} ${top_mem name 3}${offset -50} ${top_mem mem 3}
+${color #1994D1} ${top_mem name 4}${offset -50} ${top_mem mem 4}
+
+${color #1994D1}Connections:
+$color In: ${tcp_portmon 1 32767 count}  Out: ${tcp_portmon 32768 61000 count}${alignr}

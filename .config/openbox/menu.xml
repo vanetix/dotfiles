@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.5/menu">
+	<menu id="root-menu" label="Openbox">
+		<separator label="Openbox"/>
+		<item icon="/home/vanetix/.icons/Awoken/clear/24x24/apps/google-chrome.png" label="chromium">
+			<action name="Execute">
+				<execute>chromium</execute>
+			</action>
+		</item>
+		<item icon="/home/vanetix/.icons/Awoken/clear/24x24/apps/skype.png" label="skype">
+			<action name="Execute">
+				<execute>skype</execute>
+			</action>
+		</item>
+		<item icon="/home/vanetix/.icons/Awoken/clear/24x24/apps/sublime-text-2.png" label="sublime">
+			<action name="Execute">
+				<execute>~/.bin/sublime</execute>
+			</action>
+		</item>
+		<item icon="/home/vanetix/.icons/Awoken/clear/24x24/apps/pcmanfm-mod.png" label="thunar">
+			<action name="Execute">
+				<execute>thunar</execute>
+			</action>
+		</item>
+		<item icon="/home/vanetix/.icons/Awoken/clear/24x24/apps/terminal.png" label="urxvt">
+			<action name="Execute">
+				<execute>urxvt</execute>
+			</action>
+		</item>
+		<separator/>
+
+		<!-- network menu -->
+		<menu icon="/home/vanetix/.icons/Awoken/clear/24x24/apps/netapplet.png" id="network" label="network">
+			<item label="chromium">
+				<action name="Execute">
+					<execute>chromium</execute>
+				</action>
+			</item>
+			<item label="irssi">
+				<action name="Execute">
+					<execute>urxvt -e irssi</execute>
+				</action>
+			</item>
+			<item label="skype">
+				<action name="Execute">
+					<execute>skype</execute>
+				</action>
+			</item>
+			<item label="steam">
+				<action name="Execute">
+					<execute>steam</execute>
+				</action>
+			</item>
+		</menu>
+
+		<!-- applications menu -->
+		<menu icon="/home/vanetix/.icons/Awoken/clear/24x24/apps/application-default-icon.png" id="applications" label="applications">
+			<item label="audacious">
+				<action name="Execute">
+					<execute>audacious</execute>
+				</action>
+			</item>
+			<item label="gimp">
+				<action name="Execute">
+					<execute>gimp</execute>
+				</action>
+			</item>
+			<item label="sublime">
+				<action name="Execute">
+					<execute>~/.bin/sublime</execute>
+				</action>
+			</item>
+			<item label="thunar">
+				<action name="Execute">
+					<execute>thunar</execute>
+				</action>
+			</item>
+			<item label="urxvt">
+				<action name="Execute">
+					<execute>urxvt</execute>
+				</action>
+			</item>
+			<item label="vlc">
+				<action name="Execute">
+					<execute>vlc</execute>
+				</action>
+			</item>
+		</menu>
+
+		<!-- pipemenus menu -->
+		<menu icon="/home/vanetix/.icons/Awoken/clear/24x24/categories/applications-accessories.png" id="pipe-menus" label="pipemenus">
+			<menu id="pipemenu-calendar" label="calendar" execute="~/.config/openbox/pipemenus/calendar.sh"/>
+			<menu id="pipemenu-weather" label="weather" execute="~/.config/openbox/pipemenus/weather.py USTX1210 Fahrenheit"/>
+		</menu>
+
+		<!-- tools menu -->
+		<menu icon="/home/vanetix/.icons/Awoken/clear/24x24/apps/gconf-editor.png" id="tools" label="tools">
+			<item label="alsamixer">
+				<action name="Execute">
+					<execute>urxvt -e alsamixer</execute>
+				</action>
+			</item>
+			<item label="pavucontrol">
+				<action name="Execute">
+					<execute>pavucontrol</execute>
+				</action>
+			</item>
+			<item label="run">
+				<action name="execute">
+					<execute>gmrun</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+
+		<!-- settings menu -->
+		<menu icon="/home/vanetix/.icons/Awoken/clear/24x24/actions/system-run.png" id="settings" label="settings">
+			<menu id="openbox" label="openbox">
+				<item label="configuration">
+					<action name="Execute">
+						<execute>obconf</execute>
+					</action>
+				</item>
+				<item label="edit menu">
+					<action name="Execute">
+						<execute>urxvt -e vim ~/.config/openbox/menu.xml</execute>
+					</action>
+				</item>
+				<item label="reconfigure">
+					<action name="Reconfigure"/>
+				</item>
+			</menu>
+			<menu id="tint2" label="tint 2">
+				<item label="edit configuration">
+					<action name="execute">
+						<execute>urxvt -e vim ~/.config/tint2/tint2rc</execute>
+					</action>
+				</item>
+				<item label="tint2conf">
+					<action name="execute">
+						<execute>tint2conf</execute>
+					</action>
+				</item>
+			</menu>
+		        <item label="nitrogen">
+				<action name="Execute">
+					<execute>nitrogen ~/Pictures</execute>
+				</action>
+			</item>
+			<item label="gtk theme">
+				<action name="Execute">
+					<execute>gtk-theme-switch2</execute>
+				</action>
+			</item>
+		</menu>
+
+		<!-- exit menu -->
+		<menu icon="/home/vanetix/.icons/Awoken/clear/24x24/emblems/emblem-linux.png" id="exit" label="exit">
+			<item label="logout">
+				<action name="Exit"/>
+			</item>
+			<item label="suspend">
+				<action name="Execute">
+					<execute>sudo pm-suspend</execute>
+				</action>
+			</item>
+			<item label="restart">
+				<action name="Execute">
+					<execute>sudo reboot</execute>
+				</action>
+			</item>
+			<item label="shutdown">
+				<action name="Execute">
+					<execute>sudo shutdown -h now</execute>
+				</action>
+			</item>
+		</menu>
+	</menu>
+</openbox_menu>
