@@ -1,0 +1,37 @@
+[user]
+	name = Matt McFarland
+	email = 783024+vanetix@users.noreply.github.com
+
+[alias]
+	tree = "log --graph --oneline --all"
+
+[push]
+	default = simple
+
+[color]
+	ui = auto
+
+[color "branch"]
+	local = yellow
+	remote = cyan
+	current = green
+
+[color "diff"]
+	old = red
+	new = green
+	meta = yellow
+	frag = magenta
+
+[color "status"]
+	added = green
+	changed = red bold
+	untracked = cyan
+
+[url "git@github.com"]
+  insteadOf = "gh"
+
+[url "git@github.com:vanetix/"]
+  insteadOf = "me:"
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
